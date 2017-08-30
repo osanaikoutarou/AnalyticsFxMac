@@ -1,0 +1,70 @@
+#############
+## for iOS ##
+#############
+
+# Xcode
+build/
+DerivedData/
+
+# Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+creema-ios.xcworkspace/*
+
+# Other
+*.moved-aside
+*.xcuserstate
+
+# Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+Pods/*
+
+# library
+# creema-ios/vender/*
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/README.md
+
+# Code Injection
+iOSInjectionProject/
+
+# Objective-C Patch
+*.xcscmblueprint
+
+
+####################
+## for Creema iOS ##
+####################
+
+# provisioning file
+*.mobileprovision
+!fastlane/files/*.mobileprovision
+
+# Ruby / Gem / Bundler
+.bundle/
+
+# others
+*.swp
+*.un~
+!.gitkeep
+.DS_Store
+tmp/*
+Environment-*.h
+!Environment-jp+release.h
+!Environment-tw+release.h

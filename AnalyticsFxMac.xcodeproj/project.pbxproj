@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA3C6B591F554BDB0034DE88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B581F554BDB0034DE88 /* main.m */; };
+		DA3C6B591F554BDB0034DE88 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B581F554BDB0034DE88 /* main.mm */; };
+		DA3C6B611F554D590034DE88 /* HstReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B601F554D590034DE88 /* HstReader.m */; };
+		DA3C6B6F1F5651A40034DE88 /* LoaderCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B6D1F5651A40034DE88 /* LoaderCpp.cpp */; };
+		DA3C6B731F5660530034DE88 /* Rate1min.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B721F5660530034DE88 /* Rate1min.m */; };
+		DA3C6B791F5662AE0034DE88 /* AllInfo1min.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B781F5662AE0034DE88 /* AllInfo1min.m */; };
+		F6FE398B4B0D8D651C55E642 /* libPods-AnalyticsFxMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E27703A53018A765AD77F5 /* libPods-AnalyticsFxMac.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +28,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF762F3818D699E8A925EFC8 /* Pods-AnalyticsFxMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsFxMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsFxMac/Pods-AnalyticsFxMac.release.xcconfig"; sourceTree = "<group>"; };
+		D6E27703A53018A765AD77F5 /* libPods-AnalyticsFxMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnalyticsFxMac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3C6B551F554BDB0034DE88 /* AnalyticsFxMac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AnalyticsFxMac; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA3C6B581F554BDB0034DE88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA3C6B581F554BDB0034DE88 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		DA3C6B5F1F554D590034DE88 /* HstReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HstReader.h; sourceTree = "<group>"; };
+		DA3C6B601F554D590034DE88 /* HstReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HstReader.m; sourceTree = "<group>"; };
+		DA3C6B6D1F5651A40034DE88 /* LoaderCpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoaderCpp.cpp; sourceTree = "<group>"; };
+		DA3C6B6E1F5651A40034DE88 /* LoaderCpp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LoaderCpp.hpp; sourceTree = "<group>"; };
+		DA3C6B711F5660530034DE88 /* Rate1min.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rate1min.h; sourceTree = "<group>"; };
+		DA3C6B721F5660530034DE88 /* Rate1min.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rate1min.m; sourceTree = "<group>"; };
+		DA3C6B771F5662AE0034DE88 /* AllInfo1min.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllInfo1min.h; sourceTree = "<group>"; };
+		DA3C6B781F5662AE0034DE88 /* AllInfo1min.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllInfo1min.m; sourceTree = "<group>"; };
+		F27F0684A957242028B7FF9C /* Pods-AnalyticsFxMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsFxMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsFxMac/Pods-AnalyticsFxMac.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +48,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6FE398B4B0D8D651C55E642 /* libPods-AnalyticsFxMac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0544436089C637DF6632B95F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F27F0684A957242028B7FF9C /* Pods-AnalyticsFxMac.debug.xcconfig */,
+				AF762F3818D699E8A925EFC8 /* Pods-AnalyticsFxMac.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		72686C41F9BA2611E88724A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6E27703A53018A765AD77F5 /* libPods-AnalyticsFxMac.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA3C6B4C1F554BDB0034DE88 = {
 			isa = PBXGroup;
 			children = (
 				DA3C6B571F554BDB0034DE88 /* AnalyticsFxMac */,
 				DA3C6B561F554BDB0034DE88 /* Products */,
+				0544436089C637DF6632B95F /* Pods */,
+				72686C41F9BA2611E88724A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +93,25 @@
 		DA3C6B571F554BDB0034DE88 /* AnalyticsFxMac */ = {
 			isa = PBXGroup;
 			children = (
-				DA3C6B581F554BDB0034DE88 /* main.m */,
+				DA3C6B701F5660370034DE88 /* Class */,
+				DA3C6B581F554BDB0034DE88 /* main.mm */,
+				DA3C6B5F1F554D590034DE88 /* HstReader.h */,
+				DA3C6B601F554D590034DE88 /* HstReader.m */,
+				DA3C6B6D1F5651A40034DE88 /* LoaderCpp.cpp */,
+				DA3C6B6E1F5651A40034DE88 /* LoaderCpp.hpp */,
 			);
 			path = AnalyticsFxMac;
+			sourceTree = "<group>";
+		};
+		DA3C6B701F5660370034DE88 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				DA3C6B711F5660530034DE88 /* Rate1min.h */,
+				DA3C6B721F5660530034DE88 /* Rate1min.m */,
+				DA3C6B771F5662AE0034DE88 /* AllInfo1min.h */,
+				DA3C6B781F5662AE0034DE88 /* AllInfo1min.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA3C6B5C1F554BDB0034DE88 /* Build configuration list for PBXNativeTarget "AnalyticsFxMac" */;
 			buildPhases = (
+				2463E285B78CB7EC315E5828 /* [CP] Check Pods Manifest.lock */,
 				DA3C6B511F554BDB0034DE88 /* Sources */,
 				DA3C6B521F554BDB0034DE88 /* Frameworks */,
 				DA3C6B531F554BDB0034DE88 /* CopyFiles */,
+				195B169644D41851F7207064 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -115,12 +169,49 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		195B169644D41851F7207064 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnalyticsFxMac/Pods-AnalyticsFxMac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2463E285B78CB7EC315E5828 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA3C6B511F554BDB0034DE88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA3C6B591F554BDB0034DE88 /* main.m in Sources */,
+				DA3C6B6F1F5651A40034DE88 /* LoaderCpp.cpp in Sources */,
+				DA3C6B731F5660530034DE88 /* Rate1min.m in Sources */,
+				DA3C6B791F5662AE0034DE88 /* AllInfo1min.m in Sources */,
+				DA3C6B611F554D590034DE88 /* HstReader.m in Sources */,
+				DA3C6B591F554BDB0034DE88 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +309,7 @@
 		};
 		DA3C6B5D1F554BDB0034DE88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27F0684A957242028B7FF9C /* Pods-AnalyticsFxMac.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = U7MW83A3B2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -226,6 +318,7 @@
 		};
 		DA3C6B5E1F554BDB0034DE88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF762F3818D699E8A925EFC8 /* Pods-AnalyticsFxMac.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = U7MW83A3B2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -251,6 +344,7 @@
 				DA3C6B5E1F554BDB0034DE88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
