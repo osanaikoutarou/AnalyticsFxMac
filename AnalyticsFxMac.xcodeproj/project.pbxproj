@@ -12,6 +12,7 @@
 		DA3C6B6F1F5651A40034DE88 /* LoaderCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B6D1F5651A40034DE88 /* LoaderCpp.cpp */; };
 		DA3C6B731F5660530034DE88 /* Rate1min.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B721F5660530034DE88 /* Rate1min.m */; };
 		DA3C6B791F5662AE0034DE88 /* AllInfo1min.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B781F5662AE0034DE88 /* AllInfo1min.m */; };
+		DAD5EAF01F57EDD400CF133B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD5EAEF1F57EDD400CF133B /* NSDate+Utilities.m */; };
 		F6FE398B4B0D8D651C55E642 /* libPods-AnalyticsFxMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E27703A53018A765AD77F5 /* libPods-AnalyticsFxMac.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		DA3C6B721F5660530034DE88 /* Rate1min.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rate1min.m; sourceTree = "<group>"; };
 		DA3C6B771F5662AE0034DE88 /* AllInfo1min.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllInfo1min.h; sourceTree = "<group>"; };
 		DA3C6B781F5662AE0034DE88 /* AllInfo1min.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllInfo1min.m; sourceTree = "<group>"; };
+		DAD5EAEE1F57EDD400CF133B /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		DAD5EAEF1F57EDD400CF133B /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		F27F0684A957242028B7FF9C /* Pods-AnalyticsFxMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsFxMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsFxMac/Pods-AnalyticsFxMac.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +96,7 @@
 		DA3C6B571F554BDB0034DE88 /* AnalyticsFxMac */ = {
 			isa = PBXGroup;
 			children = (
+				DAD5EAED1F57ED7000CF133B /* utilities */,
 				DA3C6B701F5660370034DE88 /* Class */,
 				DA3C6B581F554BDB0034DE88 /* main.mm */,
 				DA3C6B5F1F554D590034DE88 /* HstReader.h */,
@@ -112,6 +116,15 @@
 				DA3C6B781F5662AE0034DE88 /* AllInfo1min.m */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		DAD5EAED1F57ED7000CF133B /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DAD5EAEE1F57EDD400CF133B /* NSDate+Utilities.h */,
+				DAD5EAEF1F57EDD400CF133B /* NSDate+Utilities.m */,
+			);
+			path = utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3C6B6F1F5651A40034DE88 /* LoaderCpp.cpp in Sources */,
+				DAD5EAF01F57EDD400CF133B /* NSDate+Utilities.m in Sources */,
 				DA3C6B731F5660530034DE88 /* Rate1min.m in Sources */,
 				DA3C6B791F5662AE0034DE88 /* AllInfo1min.m in Sources */,
 				DA3C6B611F554D590034DE88 /* HstReader.m in Sources */,
