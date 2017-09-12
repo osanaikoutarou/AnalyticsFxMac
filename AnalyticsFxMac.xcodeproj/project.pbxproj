@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0A41521F67C0E100BD9817 /* AllRate.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA0A41511F67C0E100BD9817 /* AllRate.mm */; };
 		DA3C6B591F554BDB0034DE88 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B581F554BDB0034DE88 /* main.mm */; };
-		DA3C6B611F554D590034DE88 /* HstReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B601F554D590034DE88 /* HstReader.m */; };
+		DA3C6B611F554D590034DE88 /* HstReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B601F554D590034DE88 /* HstReader.mm */; };
 		DA3C6B6F1F5651A40034DE88 /* LoaderCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B6D1F5651A40034DE88 /* LoaderCpp.cpp */; };
-		DA3C6B731F5660530034DE88 /* Rate1min.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B721F5660530034DE88 /* Rate1min.m */; };
-		DA3C6B791F5662AE0034DE88 /* AllInfo1min.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B781F5662AE0034DE88 /* AllInfo1min.m */; };
+		DA3C6B731F5660530034DE88 /* Rate1min.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B721F5660530034DE88 /* Rate1min.mm */; };
+		DA3C6B791F5662AE0034DE88 /* AllInfo1min.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B781F5662AE0034DE88 /* AllInfo1min.mm */; };
 		DAD5EAF01F57EDD400CF133B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD5EAEF1F57EDD400CF133B /* NSDate+Utilities.m */; };
 		F6FE398B4B0D8D651C55E642 /* libPods-AnalyticsFxMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E27703A53018A765AD77F5 /* libPods-AnalyticsFxMac.a */; };
 /* End PBXBuildFile section */
@@ -31,16 +32,18 @@
 /* Begin PBXFileReference section */
 		AF762F3818D699E8A925EFC8 /* Pods-AnalyticsFxMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsFxMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsFxMac/Pods-AnalyticsFxMac.release.xcconfig"; sourceTree = "<group>"; };
 		D6E27703A53018A765AD77F5 /* libPods-AnalyticsFxMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnalyticsFxMac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0A41501F67C0E100BD9817 /* AllRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllRate.h; sourceTree = "<group>"; };
+		DA0A41511F67C0E100BD9817 /* AllRate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AllRate.mm; sourceTree = "<group>"; };
 		DA3C6B551F554BDB0034DE88 /* AnalyticsFxMac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AnalyticsFxMac; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3C6B581F554BDB0034DE88 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		DA3C6B5F1F554D590034DE88 /* HstReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HstReader.h; sourceTree = "<group>"; };
-		DA3C6B601F554D590034DE88 /* HstReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HstReader.m; sourceTree = "<group>"; };
+		DA3C6B601F554D590034DE88 /* HstReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HstReader.mm; sourceTree = "<group>"; };
 		DA3C6B6D1F5651A40034DE88 /* LoaderCpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoaderCpp.cpp; sourceTree = "<group>"; };
 		DA3C6B6E1F5651A40034DE88 /* LoaderCpp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LoaderCpp.hpp; sourceTree = "<group>"; };
 		DA3C6B711F5660530034DE88 /* Rate1min.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rate1min.h; sourceTree = "<group>"; };
-		DA3C6B721F5660530034DE88 /* Rate1min.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rate1min.m; sourceTree = "<group>"; };
+		DA3C6B721F5660530034DE88 /* Rate1min.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Rate1min.mm; sourceTree = "<group>"; };
 		DA3C6B771F5662AE0034DE88 /* AllInfo1min.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllInfo1min.h; sourceTree = "<group>"; };
-		DA3C6B781F5662AE0034DE88 /* AllInfo1min.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllInfo1min.m; sourceTree = "<group>"; };
+		DA3C6B781F5662AE0034DE88 /* AllInfo1min.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AllInfo1min.mm; sourceTree = "<group>"; };
 		DAD5EAEE1F57EDD400CF133B /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		DAD5EAEF1F57EDD400CF133B /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		F27F0684A957242028B7FF9C /* Pods-AnalyticsFxMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsFxMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsFxMac/Pods-AnalyticsFxMac.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +103,7 @@
 				DA3C6B701F5660370034DE88 /* Class */,
 				DA3C6B581F554BDB0034DE88 /* main.mm */,
 				DA3C6B5F1F554D590034DE88 /* HstReader.h */,
-				DA3C6B601F554D590034DE88 /* HstReader.m */,
+				DA3C6B601F554D590034DE88 /* HstReader.mm */,
 				DA3C6B6D1F5651A40034DE88 /* LoaderCpp.cpp */,
 				DA3C6B6E1F5651A40034DE88 /* LoaderCpp.hpp */,
 			);
@@ -111,9 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				DA3C6B711F5660530034DE88 /* Rate1min.h */,
-				DA3C6B721F5660530034DE88 /* Rate1min.m */,
+				DA3C6B721F5660530034DE88 /* Rate1min.mm */,
 				DA3C6B771F5662AE0034DE88 /* AllInfo1min.h */,
-				DA3C6B781F5662AE0034DE88 /* AllInfo1min.m */,
+				DA3C6B781F5662AE0034DE88 /* AllInfo1min.mm */,
+				DA0A41501F67C0E100BD9817 /* AllRate.h */,
+				DA0A41511F67C0E100BD9817 /* AllRate.mm */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -222,9 +227,10 @@
 			files = (
 				DA3C6B6F1F5651A40034DE88 /* LoaderCpp.cpp in Sources */,
 				DAD5EAF01F57EDD400CF133B /* NSDate+Utilities.m in Sources */,
-				DA3C6B731F5660530034DE88 /* Rate1min.m in Sources */,
-				DA3C6B791F5662AE0034DE88 /* AllInfo1min.m in Sources */,
-				DA3C6B611F554D590034DE88 /* HstReader.m in Sources */,
+				DA3C6B731F5660530034DE88 /* Rate1min.mm in Sources */,
+				DA3C6B791F5662AE0034DE88 /* AllInfo1min.mm in Sources */,
+				DA3C6B611F554D590034DE88 /* HstReader.mm in Sources */,
+				DA0A41521F67C0E100BD9817 /* AllRate.mm in Sources */,
 				DA3C6B591F554BDB0034DE88 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F27F0684A957242028B7FF9C /* Pods-AnalyticsFxMac.debug.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				DEVELOPMENT_TEAM = U7MW83A3B2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -334,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF762F3818D699E8A925EFC8 /* Pods-AnalyticsFxMac.release.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				DEVELOPMENT_TEAM = U7MW83A3B2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

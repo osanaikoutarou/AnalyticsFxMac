@@ -11,7 +11,7 @@
 
 @implementation Rate1min
 
-+ (void)createWithRateInfo:(RateInfo)rateInfo {
++ (Rate1min *)createWithRateInfo:(RateInfo)rateInfo {
     Rate1min *rate1min = [Rate1min new];
     
     rate1min.open = rateInfo.open;
@@ -20,6 +20,7 @@
     rate1min.low = rateInfo.low;
     rate1min.daytime = [NSDate dateWithTimeIntervalSince1970:rateInfo.ctm];
     
+    return rate1min;
 }
 
 // 最初の1分足

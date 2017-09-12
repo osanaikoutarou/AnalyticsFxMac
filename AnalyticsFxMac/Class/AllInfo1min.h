@@ -11,6 +11,7 @@
 
 @interface AllInfo1min : NSObject
 
+@property (nonatomic) NSInteger date;
 @property (nonatomic) Rate1min *rate1min;
 //@property (nonatomic) Rate1min *rate5min;
 //@property (nonatomic) Rate1min *rate15min;
@@ -19,5 +20,12 @@
 //@property (nonatomic) Rate1min *rate1day;
 //@property (nonatomic) Rate1min *rate1week;
 //@property (nonatomic) Rate1min *rate1month;
+
+//
+@property (nonatomic) double ma21_1min;
+
+
+//
++ (AllInfo1min *)createWithRateInfo:(RateInfo)rateInfo;
 
 @end

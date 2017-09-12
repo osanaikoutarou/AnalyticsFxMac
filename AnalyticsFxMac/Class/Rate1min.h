@@ -35,6 +35,6 @@ typedef NS_ENUM(NSUInteger, AsiTime) {
 // 最後の1分足
 - (BOOL)isRefreshEndTime:(AsiTime)asi;
 
-+ (void)createWithRateInfo:(RateInfo)rateInfo;
++ (Rate1min *)createWithRateInfo:(RateInfo)rateInfo;
 
 @end
