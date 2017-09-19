@@ -22,6 +22,10 @@
     [self.rates addObject:allInfo1min];
 }
 
+- (AllInfo1min *)getAllInfo1min:(NSInteger)index {
+    return self.rates[index];
+}
+
 - (void)calcMA:(NSInteger)n {
     // 単純移動平均線
     

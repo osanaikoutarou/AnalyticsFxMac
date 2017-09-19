@@ -63,12 +63,12 @@ RateInfo *doLoadB(const char* filepath) {
 //    }
     
     
-    RateInfo *rates = (RateInfo*)malloc(1000 * sizeof(RateInfo));
+    RateInfo *rates = (RateInfo*)malloc(100000 * sizeof(RateInfo));
     
     int count = 0;
     RateInfo rate;
     while(!ifs.eof()
-          && count<1000) {
+          && count<100000) {
         
         ifs.read((char*)&rate, 44);
         if(ifs.bad()) {

@@ -24,6 +24,10 @@
 //
 @property (nonatomic) double ma21_1min;
 
+@property (nonatomic) NSInteger takanekoTurmMin;    //何分ぶりの高猫か
+@property (nonatomic) NSInteger yasunekoTurmMin;    //何分ぶりの安猫か
+@property (nonatomic) BOOL takanekoStop;
+@property (nonatomic) BOOL yasunekoStop;
 
 //
 + (AllInfo1min *)createWithRateInfo:(RateInfo)rateInfo;
