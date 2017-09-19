@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
 
         AllRate *allRate = [AllRate new];
         
-        for (int i=0;i<100000;i++) {
+        for (int i=0;i<300000;i++) {
             RateInfo r = rates[i];
             NSLog(@"open:%f",r.open);
 
@@ -62,7 +62,7 @@ int main(int argc, const char * argv[]) {
                 }
             }
             
-            if (i%20000==0) {
+            if (i%5000==0) {
                 NSLog(@"i%d/",i);
             }
         }
@@ -71,8 +71,13 @@ int main(int argc, const char * argv[]) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         // ファイル名の作成
         NSString *filename = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"sample.txt"];
+        NSFileHandle* fh = [NSFileHandle fileHandleForWritingAtPath:filename];
+        if ( !fh ) {
+            [[NSFileManager defaultManager] createFileAtPath:filename contents:nil attributes:nil];
+            fh = [NSFileHandle fileHandleForWritingAtPath:filename];
+        }
         NSError *error;
-        
+        BOOL result;
 //        // ファイルへの保存
 //        BOOL result = [sample writeToFile:filename atomically:YES encoding:NSUTF8StringEncoding error:&error];
 //        if(result){
@@ -81,14 +86,19 @@ int main(int argc, const char * argv[]) {
 //            NSLog(content);
 //        }
         
-        NSString *text = @"";
         for (int i=0; i<allRate.rates.count; i++) {
             AllInfo1min *current = [allRate getAllInfo1min:i];
             
-            text = [text stringByAppendingString:[NSString stringWithFormat:@"%ld\t%ld\t%f\t%f\n",current.takanekoTurmMin,current.yasunekoTurmMin,current.rate1min.high,current.rate1min.low]];
+            @try {
+                [fh seekToEndOfFile];
+                
+                NSData *data = [[NSString stringWithFormat:@"%ld\t%ld\t%f\t%f\n",current.takanekoTurmMin,current.yasunekoTurmMin,current.rate1min.high,current.rate1min.low] dataUsingEncoding:NSUTF8StringEncoding];
+                [fh writeData:data];
+            }
+            @catch (NSException * e) {
+                result = NO;
+            }
         }
-        [text writeToFile:filename atomically:NO encoding:NSUTF8StringEncoding error:&error];
-        
         
 //        [allRate calcMA:21];
         
