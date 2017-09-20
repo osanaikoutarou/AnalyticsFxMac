@@ -13,6 +13,7 @@
 		DA3C6B6F1F5651A40034DE88 /* LoaderCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B6D1F5651A40034DE88 /* LoaderCpp.cpp */; };
 		DA3C6B731F5660530034DE88 /* Rate1min.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B721F5660530034DE88 /* Rate1min.mm */; };
 		DA3C6B791F5662AE0034DE88 /* AllInfo1min.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA3C6B781F5662AE0034DE88 /* AllInfo1min.mm */; };
+		DABB73AF1F720F53001071A6 /* Dosu.m in Sources */ = {isa = PBXBuildFile; fileRef = DABB73AE1F720F53001071A6 /* Dosu.m */; };
 		DAD5EAF01F57EDD400CF133B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD5EAEF1F57EDD400CF133B /* NSDate+Utilities.m */; };
 		F6FE398B4B0D8D651C55E642 /* libPods-AnalyticsFxMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E27703A53018A765AD77F5 /* libPods-AnalyticsFxMac.a */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,8 @@
 		DA3C6B721F5660530034DE88 /* Rate1min.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Rate1min.mm; sourceTree = "<group>"; };
 		DA3C6B771F5662AE0034DE88 /* AllInfo1min.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllInfo1min.h; sourceTree = "<group>"; };
 		DA3C6B781F5662AE0034DE88 /* AllInfo1min.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AllInfo1min.mm; sourceTree = "<group>"; };
+		DABB73AD1F720F53001071A6 /* Dosu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dosu.h; sourceTree = "<group>"; };
+		DABB73AE1F720F53001071A6 /* Dosu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dosu.m; sourceTree = "<group>"; };
 		DAD5EAEE1F57EDD400CF133B /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		DAD5EAEF1F57EDD400CF133B /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		F27F0684A957242028B7FF9C /* Pods-AnalyticsFxMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsFxMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsFxMac/Pods-AnalyticsFxMac.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				DA3C6B781F5662AE0034DE88 /* AllInfo1min.mm */,
 				DA0A41501F67C0E100BD9817 /* AllRate.h */,
 				DA0A41511F67C0E100BD9817 /* AllRate.mm */,
+				DABB73AD1F720F53001071A6 /* Dosu.h */,
+				DABB73AE1F720F53001071A6 /* Dosu.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				DAD5EAF01F57EDD400CF133B /* NSDate+Utilities.m in Sources */,
 				DA3C6B731F5660530034DE88 /* Rate1min.mm in Sources */,
 				DA3C6B791F5662AE0034DE88 /* AllInfo1min.mm in Sources */,
+				DABB73AF1F720F53001071A6 /* Dosu.m in Sources */,
 				DA3C6B611F554D590034DE88 /* HstReader.mm in Sources */,
 				DA0A41521F67C0E100BD9817 /* AllRate.mm in Sources */,
 				DA3C6B591F554BDB0034DE88 /* main.mm in Sources */,

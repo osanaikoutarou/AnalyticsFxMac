@@ -12,6 +12,7 @@
 #import "Rate1min.h"
 #import "AllInfo1min.h"
 #import "AllRate.h"
+#import "Dosu.h"
 
 extern RateInfo *doLoadB(const char* filepath);
 
@@ -86,22 +87,79 @@ int main(int argc, const char * argv[]) {
 //            NSLog(content);
 //        }
         
-        for (int i=0; i<allRate.rates.count; i++) {
+//        for (int i=0; i<allRate.rates.count; i++) {
+//            AllInfo1min *current = [allRate getAllInfo1min:i];
+//            
+//            @try {
+//                [fh seekToEndOfFile];
+//                
+//                NSData *data = [[NSString stringWithFormat:@"%ld\t%ld\t%f\t%f\n",current.takanekoTurmMin,current.yasunekoTurmMin,current.rate1min.high,current.rate1min.low] dataUsingEncoding:NSUTF8StringEncoding];
+//                [fh writeData:data];
+//            }
+//            @catch (NSException * e) {
+//                result = NO;
+//            }
+//        }
+        
+        // 確率計算
+        NSMutableArray *dosus = [NSMutableArray array];
+        for (int i=0; i<50; i++) {
+            Dosu *dosu = [Dosu new];
+            dosu.min = 1 + i*10;
+            dosu.max = (i+1)*10;
+            [dosus addObject:dosu];
+        }
+        Dosu *last = dosus.lastObject;
+        last.max = 3000;
+        
+        int max = ((Dosu *)dosus.lastObject).max;
+        
+        //TODO:条件付き確率
+        //TODO:◯分まで高猫しなかった場合、それ以後高猫しない確率
+        for (int i=0; i<allRate.rates.count - max; i++) {
             AllInfo1min *current = [allRate getAllInfo1min:i];
             
-            @try {
-                [fh seekToEndOfFile];
-                
-                NSData *data = [[NSString stringWithFormat:@"%ld\t%ld\t%f\t%f\n",current.takanekoTurmMin,current.yasunekoTurmMin,current.rate1min.high,current.rate1min.low] dataUsingEncoding:NSUTF8StringEncoding];
-                [fh writeData:data];
-            }
-            @catch (NSException * e) {
-                result = NO;
+            if (current.takanekoTurmMin > 7200) {
+                // 1週間ぶりの高猫なら
+                BOOL exist=NO;
+                for (int j=1; j<=max; j++) {
+                    AllInfo1min *after = [allRate getAllInfo1min:i+j];
+                    
+                    // N分後に高猫してる
+                    if (after.takanekoTurmMin > current.takanekoTurmMin) {
+                        for (Dosu *d in dosus) {
+                            if (d.max >= j && d.min <= j) {
+                                d.count++;
+                            }
+                            else {
+                                d.notCount++;
+                            }
+                        }
+                        exist=YES;
+                        break;
+                    }
+                }
+                if (!exist) {
+                    for (Dosu *d in dosus) {
+                        d.notCount++;
+                    }
+                }
             }
         }
         
-//        [allRate calcMA:21];
+        // 何かこの計算違う気がする
+        // 1〜10分に再高猫しなかった場合　だから、した場合を除く
+//        for (int i=1;i<dosus.count;i++) {
+//            Dosu *d = dosus[i];
+//            Dosu *prev = dosus[i-1];
+//            d.notCount -= prev.notCount;
+//        }
         
+        // 高猫
+        for (Dosu *d in dosus) {
+            double kakuritu = ((double)d.count/(d.count+d.notCount))*100.0;
+            NSLog(@"1週間ぶりの高猫がきたら、%d分〜%d分に再高猫する確率%.2f％(%d %d)",(int)(d.min),(int)(d.max),kakuritu,d.count,d.notCount);
+        }
     }
     
     
