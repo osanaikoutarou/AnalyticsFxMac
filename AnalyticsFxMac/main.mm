@@ -113,6 +113,7 @@ int main(int argc, const char * argv[]) {
         last.max = 3000;
         
         int max = ((Dosu *)dosus.lastObject).max;
+        int souCount = 0;
         
         //TODO:条件付き確率
         //TODO:◯分まで高猫しなかった場合、それ以後高猫しない確率
@@ -127,39 +128,67 @@ int main(int argc, const char * argv[]) {
                     
                     // N分後に高猫してる
                     if (after.takanekoTurmMin > current.takanekoTurmMin) {
+                        souCount++;
+                        
                         for (Dosu *d in dosus) {
                             if (d.max >= j && d.min <= j) {
                                 d.count++;
-                            }
-                            else {
-                                d.notCount++;
                             }
                         }
                         exist=YES;
                         break;
                     }
                 }
-                if (!exist) {
-                    for (Dosu *d in dosus) {
-                        d.notCount++;
-                    }
-                }
             }
         }
         
-        // 何かこの計算違う気がする
-        // 1〜10分に再高猫しなかった場合　だから、した場合を除く
-//        for (int i=1;i<dosus.count;i++) {
-//            Dosu *d = dosus[i];
-//            Dosu *prev = dosus[i-1];
-//            d.notCount -= prev.notCount;
-//        }
-        
         // 高猫
         for (Dosu *d in dosus) {
-            double kakuritu = ((double)d.count/(d.count+d.notCount))*100.0;
-            NSLog(@"1週間ぶりの高猫がきたら、%d分〜%d分に再高猫する確率%.2f％(%d %d)",(int)(d.min),(int)(d.max),kakuritu,d.count,d.notCount);
+            double kakuritu = ((double)d.count/souCount)*100.0;
+            NSLog(@"1週間ぶりの高猫がきたら、%d分〜%d分に再高猫する確率%.2f％",(int)(d.min),(int)(d.max),kakuritu);
         }
+        
+        NSLog(@"");
+        
+        // 1〜N分に再高猫していなくて、N〜M分に再高猫する確率
+        for (int i=1; i<dosus.count; i++) {
+            Dosu *dosu = dosus[i];
+            Dosu *prev = dosus[i-1];
+            
+            // それまでに高猫していない回数
+            int bosu = 0;
+            for (int j=0; j<i; j++) {
+                Dosu *d = dosus[j];
+                bosu += d.count;
+            }
+            
+            double kakuritu = ((double)dosu.count/bosu)*100.0;
+            NSLog(@"高猫後\t%d分\t再高猫していなくて、%d〜%d分に再高猫する確率\t%.2f％",(int)(prev.max),(int)(dosu.min),(int)(dosu.max),kakuritu);
+        }
+        
+        NSLog(@"");
+        
+        // 1〜N分に再高猫していなくて、N〜3000分に再高猫しない確率
+        for (int i=1; i<dosus.count; i++) {
+            Dosu *dosu = dosus[i];
+            Dosu *prev = dosus[i-1];
+            
+            // それまでに高猫していない回数
+            int bosu = 0;
+            for (int j=0; j<i; j++) {
+                Dosu *d = dosus[j];
+                bosu += d.count;
+            }
+            int takaneko = 0;
+            for (int j=i; j<dosus.count; j++) {
+                Dosu *d = dosus[j];
+                takaneko += d.count;
+            }
+            
+            double kakuritu = (1.0 - (double)takaneko/bosu)*100.0;
+            NSLog(@"高猫後\t%d分\t再高猫していなくて、%d〜3000分に再高猫しない確率\t%.2f％",(int)(prev.max),(int)(dosu.min),kakuritu);
+        }
+
     }
     
     
