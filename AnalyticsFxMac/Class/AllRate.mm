@@ -26,22 +26,134 @@
     return self.rates[index];
 }
 
-- (void)calcMA:(NSInteger)n {
+- (void)calcMA {
     // 単純移動平均線
-    
-    for (int i=0; i<self.rates.count; i++) {
-        if (i-n<0) {
-            continue;
-        }
 
+    int n;
+    
+    n=21;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
         double sum = 0;
         for (int j=1; j<=n; j++) {
             sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
         }
         ((AllInfo1min *)(self.rates[i])).ma21_1min = sum / n;
-        
-        NSLog(@"21ma %f",((AllInfo1min *)self.rates[i]).ma21_1min);
     }
+    
+    n=21*5;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma21x5_1min = sum / n;
+    }
+
+    n=21*15;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma21x15_1min = sum / n;
+    }
+
+    n=21*60;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma21x60_1min = sum / n;
+    }
+
+    n=21*1440;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma21x1440_1min = sum / n;
+    }
+
+    n=21*7200;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma21x7200_1min = sum / n;
+    }
+    
+    
+    n=26;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma26_1min = sum / n;
+    }
+    
+    n=26*5;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma26x5_1min = sum / n;
+    }
+    
+    n=26*15;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma26x15_1min = sum / n;
+    }
+    
+    n=26*60;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma26x60_1min = sum / n;
+    }
+    
+    n=26*1440;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma26x1440_1min = sum / n;
+    }
+    
+    n=26*7200;
+    for (int i=0; i<self.rates.count; i++) {
+        if (i-n<0) {continue;}
+        double sum = 0;
+        for (int j=1; j<=n; j++) {
+            sum += ((AllInfo1min *)self.rates[i-j]).rate1min.close;
+        }
+        ((AllInfo1min *)(self.rates[i])).ma26x7200_1min = sum / n;
+    }
+
+
+
 }
 
 @end

@@ -23,6 +23,20 @@
 
 //
 @property (nonatomic) double ma21_1min;
+@property (nonatomic) double ma21x5_1min;
+@property (nonatomic) double ma21x15_1min;
+@property (nonatomic) double ma21x60_1min;
+@property (nonatomic) double ma21x240_1min;
+@property (nonatomic) double ma21x1440_1min;
+@property (nonatomic) double ma21x7200_1min;
+@property (nonatomic) double ma26_1min;
+@property (nonatomic) double ma26x5_1min;
+@property (nonatomic) double ma26x15_1min;
+@property (nonatomic) double ma26x60_1min;
+@property (nonatomic) double ma26x240_1min;
+@property (nonatomic) double ma26x1440_1min;
+@property (nonatomic) double ma26x7200_1min;
+
 
 @property (nonatomic) NSInteger takanekoTurmMin;    //何分ぶりの高猫か
 @property (nonatomic) NSInteger yasunekoTurmMin;    //何分ぶりの安猫か

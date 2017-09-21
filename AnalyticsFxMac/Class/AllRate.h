@@ -17,6 +17,6 @@
 - (void)addRate:(AllInfo1min *)allInfo1min;
 - (AllInfo1min *)getAllInfo1min:(NSInteger)index;
 
-- (void)calcMA:(NSInteger)n;
+- (void)calcMA;
 
 @end
